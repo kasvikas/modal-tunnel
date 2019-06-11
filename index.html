@@ -4,45 +4,154 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Immersive</title>
+	<title>MODAL WCM</title>
 	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7887056/7681412/css/fonts.css" />
+	<style>
+		.btn {
+			background-color: #ff7b00;
+			border-radius: 3px;
+			color: #fff;
+			cursor: pointer;
+			font-family: sans-serif;
+			font-weight: bold;
+			margin: 16px 8px;
+			max-width: 200px;
+			padding: 12px 16px;
+			text-align: center;
+			transition: all .2s;
+		}
+		.btn:hover {
+			background-color: #e26212;
+		}
+	</style>
 
-	<link rel="stylesheet" href="immersive.css">
+	<link rel="stylesheet" href="modal.css">
 
 </head>
 <body>
 
 
 
+<!-- BOUTONS POUR TEST -- begin -->
+<div class="btn" data-target="auto">AUTO</div>
+<div class="btn" data-target="habitation">HABITATION</div>
+<div class="btn" data-target="sante">SANTÉ / PRÉVOYANCE</div>
+<div class="btn" data-target="tunnel-velo">VÉLO</div>
+<div class="btn" data-target="tunnel-contact">CONTACT</div>
+<!-- BOUTONS POUR TEST -- end -->
 
 
-<!-- IMMERSIVE HTML -- begin -->
 
-<div
-	class="g-immersive g-immersive--auto g-immersive--cta-fleche"
-	style="background-image: url('https://www.groupama.fr/documents/20295/72919/AssuranceAuto_desktop_1440x540.jpg/e50ffb28-e5bf-4f45-8fa2-7b2795dd01de');"
-	onclick="window.open('https://www.google.fr','_blank')"
->
-	<div class="g-immersive__container">
-		<h1 class="g-immersive__title">
-			Assurance multirisque habitation
-		</h1>
-		<h2 class="g-immersive__subtitle">
-			<span class="g-immersive__subtitle-content">
-				Locataire ou propriétaire,
-				<br> des solutions adaptées
-				<br> à votre logement<sup>(1)</sup>
-			</span>
-		</h2>
-		<div class="g-immersive__cta-container">
-			<a class="g-immersive__cta">En savoir plus</a>
+
+
+<!-- HTML MODAL x 5 -- end -->
+
+
+<div data-modal="auto" class="gfr-modal gfr-modal-tunnel" style="display: none;">
+	<div class="gfr-modal-content">
+		<div class="gfr-modal-header">
+			<div class="gfr-modal-univers">AUTO</div>
+			<div>Entrez votre code postal pour obtenir votre tarif</div>
+			<div class="gfr-modal-btn-close gfr-modal-close"></div>
+		</div>
+		<div class="gfr-modal-body">
+			<form method="post" action="https://devis.groupama.fr/assurance/auto/init.do">
+				<input name="idcp" type="tel" placeholder="Code postal" maxlength="5" onkeypress="return verificationChiffre(event);">
+				<div class="gfr-modal-error-msg" style="display: none;">Merci de vérifier votre code postal</div>
+				<button class="gfr-modal-cta" type="submit" onclick="submit();" disabled>FAIRE UN DEVIS AUTO</button>
+			</form>
+		</div>
+		<div class="gfr-modal-footer">
+			<div class="gfr-modal-tunnel-accelerateur">2 MOIS OFFERTS*</div>
 		</div>
 	</div>
 </div>
 
-<!-- IMMERSIVE HTML -- end -->
+
+<div data-modal="habitation" class="gfr-modal gfr-modal-tunnel" style="display: none;">
+	<div class="gfr-modal-content">
+		<div class="gfr-modal-header">
+			<div class="gfr-modal-univers">HABITATION</div>
+			<div>Entrez votre code postal pour obtenir votre tarif</div>
+			<div class="gfr-modal-btn-close gfr-modal-close"></div>
+		</div>
+		<div class="gfr-modal-body">
+			<form method="post" action="https://devis.groupama.fr/assurance/habitation/init.do">
+				<input name="idcp" type="tel" placeholder="Code postal" maxlength="5" onkeypress="return verificationChiffre(event);">
+				<div class="gfr-modal-error-msg" style="display: none;">Merci de vérifier votre code postal</div>
+				<button class="gfr-modal-cta" type="submit" onclick="submit();" disabled>FAIRE UN DEVIS HABITATION</button>
+			</form>
+		</div>
+		<div class="gfr-modal-footer"></div>
+	</div>
+</div>
 
 
+<div data-modal="sante" class="gfr-modal gfr-modal-tunnel" style="display: none;">
+	<div class="gfr-modal-content">
+		<div class="gfr-modal-header">
+			<div class="gfr-modal-univers">SANTÉ & PRÉVOYANCE</div>
+			<div>Entrez votre code postal pour obtenir votre tarif</div>
+			<div class="gfr-modal-btn-close gfr-modal-close"></div>
+		</div>
+		<div class="gfr-modal-body">
+			<form method="post" action="https://devis.groupama.fr/assurance/sante/init.do">
+				<input name="idcp" type="tel" placeholder="Code postal" maxlength="5" onkeypress="return verificationChiffre(event);">
+				<div class="gfr-modal-error-msg" style="display: none;">Merci de vérifier votre code postal</div>
+				<button class="gfr-modal-cta" type="submit" onclick="submit();" disabled>FAIRE UN DEVIS SANTÉ</button>
+			</form>
+		</div>
+		<div class="gfr-modal-footer"></div>
+	</div>
+</div>
+
+
+<div data-modal="tunnel-velo" class="gfr-modal gfr-modal-tunnel" style="display: none;">
+	<div class="gfr-modal-content">
+		<div class="gfr-modal-header">
+			<div class="gfr-modal-univers">VÉLO</div>
+			<div>Entrez votre code postal pour obtenir votre tarif</div>
+			<div class="gfr-modal-btn-close gfr-modal-close"></div>
+		</div>
+		<div class="gfr-modal-body">
+			<form method="post" action="">
+				<input name="idcp" type="tel" placeholder="Code postal" maxlength="5" onkeypress="return verificationChiffre(event);">
+				<input type="hidden" name="checkboxMoi" value="on">
+				<div class="gfr-modal-error-msg" style="display: none;">Merci de vérifier votre code postal</div>
+				<button class="gfr-modal-cta" type="submit" onclick="submit();" disabled>FAIRE UN DEVIS VÉLO</button>
+			</form>
+		</div>
+		<div class="gfr-modal-footer"></div>
+	</div>
+</div>
+
+
+<div data-modal="tunnel-contact" class="gfr-modal gfr-modal-tunnel" style="display: none;">
+	<div class="gfr-modal-content">
+		<div class="gfr-modal-header">
+			<div class="gfr-modal-univers">CONTACT</div>
+			<div>Entrez votre code postal pour contacter votre conseiller</div>
+			<div class="gfr-modal-btn-close gfr-modal-close"></div>
+		</div>
+		<div class="gfr-modal-body">
+			<form method="post" action="https://devis.groupama.fr/assurance/sante/init.do">
+				<input name="idcp" type="tel" placeholder="Code postal" maxlength="5" onkeypress="return verificationChiffre(event);">
+				<div class="gfr-modal-error-msg" style="display: none;">Merci de vérifier votre code postal</div>
+				<button class="gfr-modal-cta" type="submit" onclick="submit();" disabled>CONTACTER GROUPAMA</button>
+			</form>
+		</div>
+		<div class="gfr-modal-footer"></div>
+	</div>
+</div>
+
+
+<!-- HTML MODAL x 5 -- end -->
+
+
+
+
+
+<script src="modal.min.js"></script>
 
 
 
