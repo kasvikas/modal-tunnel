@@ -1,0 +1,226 @@
+/* SUPPRIMER EN PROD -- begin */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+body { margin: 0; padding: 0;}
+/* SUPPRIMER EN PROD -- end */
+
+
+
+
+
+/* GLOBAL STYLES -- begin */
+.g-immersive {
+	background-color: #006a53;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 480px;
+	padding: 16px;
+}
+.g-immersive[onclick],
+.g-immersive[data-target] {
+	cursor: pointer;
+}
+.g-immersive * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.g-immersive__container {
+	max-width: 1006px;
+	padding: 16px;
+	width: 100%;
+}
+.g-immersive__title {
+	background: #fff;
+	box-shadow: 16px 0 0 #fff, -16px 0 0 #fff;
+	-webkit-box-decoration-break: clone;
+	        box-decoration-break: clone;
+	color: #006a53;
+	display: inline;
+	font-family: 'Gotham Cond SSm A', 'Gotham Cond SSm B', 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: inherit;
+}
+.g-immersive__subtitle {
+	display: block;
+}
+.g-immersive__subtitle-content {
+	display: inline;
+	background-color: rgba(0, 106, 83, 0.8);
+	box-shadow: 16px 0 0 rgba(0, 106, 83, 0.8), -16px 0 0 rgba(0, 106, 83, 0.8);
+	-webkit-box-decoration-break: clone;
+	        box-decoration-break: clone;
+	color: #fff;
+	font-size: 40px;
+	font-family: 'Gotham Cond SSm A', 'Gotham Cond SSm B', 'Open Sans', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.g-immersive__subtitle-content sup {
+	font-size: 20px;
+	line-height: 32px;
+	vertical-align: text-top;
+}
+.g-immersive__cta-container {
+	margin-top: 40px;
+	margin-left: -16px;
+}
+.g-immersive__cta {
+	background-color: #ff7b00;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	color: #fff;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 20px;
+	padding: 18px 24px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background-color .2s;
+}
+.g-immersive__cta:hover {
+	background-color: #e26212;
+}
+.g-immersive--cta-fleche .g-immersive__cta {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='19' height='12' viewBox='0 0 19 12'><path fill='white' d='M18.5,5.2,14,.82a1.15,1.15,0,0,0-1.6,0,1.14,1.14,0,0,0,0,1.61L15,5H1.65A1,1,0,0,0,.5,6,1,1,0,0,0,1.64,7H15L12.4,9.56A1.13,1.13,0,1,0,14,11.17L18.5,6.8a1.14,1.14,0,0,0,.33-.8h0A1.14,1.14,0,0,0,18.5,5.2Z'/></svg>");
+	background-repeat: no-repeat;
+	background-position: calc(100% - 24px) center;
+	background-size: 19px 12px;
+	padding-right: 56px;
+}
+/* GLOBAL STYLES -- end */
+
+
+
+/* VERTICAL ALIGN -- begin */
+.g-immersive--top {
+	align-items: flex-start;
+}
+.g-immersive--bottom {
+	align-items: flex-end;
+}
+/* VERTICAL ALIGN -- end */
+
+
+
+/* COLORS -- begin */
+
+.g-immersive.g-immersive--auto .g-immersive__title { color: #e6a800; }
+.g-immersive.g-immersive--auto .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(230, 168, 0, 0.8);
+	box-shadow: 16px 0 0 rgba(230, 168, 0, 0.8), -16px 0 0 rgba(230, 168, 0, 0.8);
+}
+
+.g-immersive.g-immersive--habitation .g-immersive__title { color: #9c3; }
+.g-immersive.g-immersive--habitation .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(153, 204, 51, 0.8);
+	box-shadow: 16px 0 0 rgba(153, 204, 51, 0.8), -16px 0 0 rgba(153, 204, 51, 0.8);
+}
+
+.g-immersive.g-immersive--sante .g-immersive__title { color: #00a174; }
+.g-immersive.g-immersive--sante .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(0, 161, 116, 0.8);
+	box-shadow: 16px 0 0 rgba(0, 161, 116, 0.8), -16px 0 0 rgba(0, 161, 116, 0.8);
+}
+
+.g-immersive.g-immersive--prevoyance .g-immersive__title { color: #0085b0; }
+.g-immersive.g-immersive--prevoyance .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(0, 133, 176, 0.8);
+	box-shadow: 16px 0 0 rgba(0, 133, 176, 0.8), -16px 0 0 rgba(0, 133, 176, 0.8);
+}
+
+.g-immersive.g-immersive--epargne .g-immersive__title { color: #0099d8; }
+.g-immersive.g-immersive--epargne .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(0, 153, 216, 0.8);
+	box-shadow: 16px 0 0 rgba(0, 153, 216, 0.8), -16px 0 0 rgba(0, 153, 216, 0.8);
+}
+
+.g-immersive.g-immersive--banque .g-immersive__title { color: #c10064; }
+.g-immersive.g-immersive--banque .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(193, 0, 100, 0.8);
+	box-shadow: 16px 0 0 rgba(193, 0, 100, 0.8), -16px 0 0 rgba(193, 0, 100, 0.8);
+}
+
+.g-immersive.g-immersive--agri .g-immersive__title { color: #393; }
+.g-immersive.g-immersive--agri .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(51, 153, 51, 0.8);
+	box-shadow: 16px 0 0 rgba(51, 153, 51, 0.8), -16px 0 0 rgba(51, 153, 51, 0.8);
+}
+
+.g-immersive.g-immersive--pro .g-immersive__cta { background-color: #c02248; }
+.g-immersive.g-immersive--pro .g-immersive__cta:hover { background-color: #9f2940; }
+.g-immersive.g-immersive--pro .g-immersive__title { color: #c02248; }
+.g-immersive.g-immersive--pro .g-immersive__subtitle .g-immersive__subtitle-content {
+	background-color: rgba(192, 34, 72, 0.8);
+	box-shadow: 16px 0 0 rgba(192, 34, 72, 0.8), -16px 0 0 rgba(192, 34, 72, 0.8);
+}
+
+/* COLORS -- end */
+
+
+
+/* RESPONSIVE -- begin */
+@media only screen and (max-width: 767px) {
+	.g-immersive {
+		align-items: flex-end !important;
+		margin-bottom: 0 !important;
+		padding: 16px;
+	}
+	.g-immersive__title {
+		font-size: 28px;
+	}
+	.g-immersive__container {
+		width: 100%;
+	}
+	.g-immersive__container .g-immersive__subtitle-content {
+		font-size: 36px;
+	}
+	.g-immersive__subtitle-content sup {
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.g-immersive__cta-container {
+		margin-top: 32px;
+	}
+	.g-immersive__cta {
+		padding: 14px 32px;
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.g-immersive__container {
+		padding-bottom: 8px;
+	}
+	.g-immersive__container .g-immersive__title {
+		font-size: 22px;
+	}
+	.g-immersive__container .g-immersive__subtitle-content {
+		font-size: 32px;
+	}
+	.g-immersive__subtitle-content sup {
+		font-size: 14px;
+		line-height: 26px;
+	}
+	.g-immersive__cta-container {
+		margin-top: 24px;
+	}
+	.g-immersive__cta {
+		padding: 14px 32px;
+		font-size: 16px;
+	}
+}
+/* RESPONSIVE -- end */
